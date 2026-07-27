@@ -79,7 +79,7 @@ def resume_maker_prompt():
   with open('prompt.py', 'r') as f:
     prompt = f.read()
   return prompt
- resume_maker_prompt()   
+resume_maker_prompt()   
 #============generate resume============
 prompt = """You are a helpful AI assistant with job resume maker, your task
 is to give HTML format resume, with proper designing using recent CSS and JS
