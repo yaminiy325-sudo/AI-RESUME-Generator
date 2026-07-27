@@ -11,7 +11,6 @@ st.markdown("""## user can create or download AI created resume based on high at
 
 #===================agent code======================
 # step 2: load modules
-import IPython as ip
 import os
 import time
 import langchain
