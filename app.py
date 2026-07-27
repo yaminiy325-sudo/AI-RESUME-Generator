@@ -27,9 +27,9 @@ from langchain_community.document_loaders import PyMuPDFLoader
 
 #================API KEY LOAD==============
 
-GOOGLE_API_KEY = st.sidebar.textinput("GOOGLE_API_KEY",type="password")
-GROQ_API_KEY = st.sidebar.textinput("GROQ_API_KEY",type="password")
-TAVILY_API_KEY = st.sidebar.textinput("TAVILY_API_KEY",type="password")
+GOOGLE_API_KEY = st.sidebar.text_input("GOOGLE_API_KEY",type="password")
+GROQ_API_KEY = st.sidebar.text_input("GROQ_API_KEY",type="password")
+TAVILY_API_KEY = st.sidebar.text_input("TAVILY_API_KEY",type="password")
 #===========model building============
 model = ChatGoogleGenerativeAI(
     model='gemini-3.5-flash-lite',
