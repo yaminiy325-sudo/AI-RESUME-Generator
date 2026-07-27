@@ -99,7 +99,7 @@ Give Python Developer Resume, always use different styling use gradient theme pa
 query = final_prompt + user_details
 
 if st.button("generate resume"):
-  with st,spinner("running agent..."):
+  with st.spinner("running agent..."):
     
     response = agent.invoke({'messages': [{'role': 'user',"content": query}]})
     code = response['messages'] [-1].content [-1] ['text']  
