@@ -4,7 +4,8 @@ import streamlit as st
 
 st.title("AI RESUME MAKER")
 
-st.markdown("""## user can create or download AI created resume based on high ats score""")
+st.markdown("""## user can create or download AI created
+resume based on high ats score""")
 
 
 
