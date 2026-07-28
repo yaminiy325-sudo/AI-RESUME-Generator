@@ -105,7 +105,7 @@ if uploaded_file is not None:
         # 3. save thr image to current working directory
         image.save(save_path, "JPEG")
         st.sidebar.success(f" image successfully saved as  `{save_path}` !")
-        except Exception as e:
+    except Exception as e:
             st.error(f"error processing image: {e}")
 #============generate resume============
 prompt = """You are a helpful AI assistant with job resume maker, your task
