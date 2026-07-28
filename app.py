@@ -113,6 +113,22 @@ query = final_prompt+user_details
 
 import base64
 
+OPTIONS = ["delhi","noida","gurugram",
+           "kanpur","lukhnow","banglore","pune"]
+LOCATION = st.sidebar.multiselect('select location:',
+                                  options = options)
+JOB_PROFILE = ["python developer","gen ai",
+               "full stack","data analyst"]
+PROFILE = st.sidebar.multielect("select job role",
+                   options = JOB_PROFILE)
+job_prompt = f"""based in {PROFILE} jobs in {LOCATION},
+want latest job news in using tavily,
+try top 10 search or whatever available
+and give result like naukri theme design with 
+job name,job desc,salary,
+apply link and the result should be in the markdown should be there"""
+                                  
+
 if st.button('generate resume'):
   with st.spinner("runnign agent"):
 
@@ -130,3 +146,8 @@ if st.button('generate resume'):
     
    
     st.html(code , width="stretch" , unsafe_allow_javascript=True)
+    st.divider()
+    response = agent.invoke({'messages':[{'role':'user','content': job_prompt}]}]
+
+    job_code = respone['messages'][-1].content[-1]['text']
+    st.html(job_code, width="streach", unsafe_allow_javascript=True)
