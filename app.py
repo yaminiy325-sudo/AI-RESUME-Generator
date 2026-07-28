@@ -115,7 +115,7 @@ format resume"""
 
 final_prompt = prompt + resume_maker_prompt()
 
-user_info  st.text_input("enter your information")
+user_info = st.text_input("enter your information")
 
 user_details = f"""user details: given below:
 Resume info: {user_info}
